@@ -1,0 +1,7 @@
+<nav class="navbar navbar-dark bg-dark navbar-fixed-top" xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <a class="navbar-brand" th:href="@{/}">Sport Camp</a>
+    <span sec:authorize="isAuthenticated()">
+    <a class="btn btn-danger form-inline" role="button" th:href="@{/logout}">Logout</a>
+    </span>
+</nav>
