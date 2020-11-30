@@ -17,11 +17,11 @@
 </head>
 <body class="text-center">
 <div th:insert="header"></div>
-<form th:action="@{/find}" method="post" th:object="${childbypesel}">
-    <div>
-        <label th:if="${#fields.hasErrors('pesel')}" th:errors="*{pesel}" class="validation-message"></label>
-    </div>
+<form th:action="@{/find}" method="post" th:object="${child}">
     <div class="pesel">
+        <div>
+            <label th:if="${#fields.hasErrors('pesel')}" th:errors="*{pesel}" class="validation-message"></label>
+        </div>
     <input type="text" name="pesel" th:field="*{pesel}" placeholder="pesel">
     </div>
     <input id="findbypesel" type="submit" value="Sprawdź" class="btn btn-lg btn-primary">
